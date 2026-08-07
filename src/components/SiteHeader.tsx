@@ -30,7 +30,8 @@ export default function SiteHeader() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={styles.header}>
+    <>
+      <header className={styles.header}>
       <div className={`${styles.headerInner} container`}>
         <a className={styles.logoLink} href="/" aria-label="Elite HCS home" onClick={closeMenu}>
           <Image
@@ -96,10 +97,11 @@ export default function SiteHeader() {
           </a>
         </div>
       </nav>
+      </header>
       <div className={styles.mobileQuickActions} aria-label="Quick contact actions">
         <a href="tel:+61415427649"><Phone aria-hidden="true" size={19} /> Call now</a>
         <a href="/#contact">Make an enquiry</a>
       </div>
-    </header>
+    </>
   );
 }
