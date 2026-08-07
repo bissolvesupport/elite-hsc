@@ -10,13 +10,13 @@
 
 .headerInner {
   display: flex;
-  min-height: 76px;
+  min-height: 86px;
   align-items: center;
   gap: 28px;
 }
 
 .logoLink { display: flex; flex: 0 0 auto; }
-.logo { width: 205px; height: auto; }
+.logo { width: 76px; height: 76px; object-fit: contain; }
 
 .desktopNav {
   display: flex;
@@ -100,7 +100,7 @@
 .footer { overflow: hidden; background: #07383e; color: white; }
 .footerMain { display: grid; grid-template-columns: 1.35fr 0.75fr 1fr 1.2fr; gap: clamp(36px, 6vw, 80px); padding-top: 78px; padding-bottom: 70px; }
 .footerBrand { max-width: 320px; }
-.footerLogo { width: 230px; height: auto; padding: 6px; border-radius: 8px; background: white; }
+.footerLogo { width: 180px; height: 180px; object-fit: contain; padding: 10px; border-radius: 18px; background: white; }
 .footerBrand p, .contactColumn > p { margin: 24px 0; color: rgba(255,255,255,.72); font-size: .95rem; }
 
 .socials { display: flex; gap: 10px; }
@@ -141,8 +141,8 @@
 }
 
 @media (max-width: 900px) {
-  .headerInner { min-height: 68px; }
-  .logo { width: 180px; }
+  .headerInner { min-height: 74px; }
+  .logo { width: 64px; height: 64px; }
   .desktopNav, .headerActions { display: none; }
   .menuButton { display: flex; margin-left: auto; }
   .mobileNav { display: block; }

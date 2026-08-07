@@ -35,10 +35,10 @@ export default function SiteHeader() {
         <a className={styles.logoLink} href="/" aria-label="Elite HCS home" onClick={closeMenu}>
           <Image
             className={styles.logo}
-            src="/images/logo.png"
+            src="/images/logo-new.png"
             alt="Elite Healthcare and Community Services"
-            width={400}
-            height={80}
+            width={900}
+            height={900}
             priority
           />
         </a>

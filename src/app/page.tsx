@@ -69,7 +69,7 @@ const jsonLd = {
   name: "Elite Healthcare & Community Services",
   alternateName: "Elite HCS",
   url: "https://elitehcs.com.au/",
-  logo: "https://elitehcs.com.au/images/logo.png",
+  logo: "https://elitehcs.com.au/images/logo-new.png",
   description:
     "A registered NDIS provider delivering participant-centred disability and community supports across Victoria, New South Wales, South Australia and the Northern Territory.",
   telephone: "+61 415 427 649",
@@ -117,8 +117,8 @@ export default function HomePage() {
             </div>
             <div className={styles.heroMedia}>
               <Image
-                src="/images/cta.png"
-                alt="A support worker spending time with an NDIS participant"
+                src="/images/hero-care.jpg"
+                alt="A support worker welcoming an NDIS participant at home"
                 fill
                 priority
                 sizes="(max-width: 800px) 100vw, 44vw"
@@ -167,8 +167,8 @@ export default function HomePage() {
           <div className={`container ${styles.aboutGrid}`}>
             <div className={styles.aboutImage}>
               <Image
-                src="/images/about.jpg"
-                alt="Participant and support worker sharing a positive moment"
+                src="/images/about-care.jpg"
+                alt="An NDIS participant and support worker using a tablet together at home"
                 fill
                 sizes="(max-width: 800px) 100vw, 48vw"
               />

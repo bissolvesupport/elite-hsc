@@ -25,10 +25,10 @@ export default function SiteFooter() {
           <a href="/" aria-label="Elite HCS home">
             <Image
               className={styles.footerLogo}
-              src="/images/logo.png"
+              src="/images/logo-new.png"
               alt="Elite Healthcare and Community Services"
-              width={400}
-              height={80}
+              width={900}
+              height={900}
             />
           </a>
           <p>
