@@ -35,12 +35,17 @@ export default function SiteHeader() {
         <a className={styles.logoLink} href="/" aria-label="Elite HCS home" onClick={closeMenu}>
           <Image
             className={styles.logo}
-            src="/images/logo-new.png"
-            alt="Elite Healthcare and Community Services"
-            width={900}
-            height={900}
+            src="/images/elite-hcs-mark.png"
+            alt=""
+            width={496}
+            height={503}
             priority
           />
+          <span className={styles.brandText}>
+            <strong>Elite Healthcare</strong>
+            <span>&amp; Community Services</span>
+            <small>Making Life Better</small>
+          </span>
         </a>
 
         <nav className={styles.desktopNav} aria-label="Primary navigation">
@@ -91,6 +96,10 @@ export default function SiteHeader() {
           </a>
         </div>
       </nav>
+      <div className={styles.mobileQuickActions} aria-label="Quick contact actions">
+        <a href="tel:+61415427649"><Phone aria-hidden="true" size={19} /> Call now</a>
+        <a href="/#contact">Make an enquiry</a>
+      </div>
     </header>
   );
 }

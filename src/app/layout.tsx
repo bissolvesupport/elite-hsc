@@ -1,18 +1,105 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const siteName = "Elite Healthcare & Community Services";
+const siteUrl = "https://elitehcs.com.au";
+const title = `${siteName} | Registered NDIS Provider`;
+const description =
+  "Participant-centred NDIS support across Victoria, New South Wales, South Australia and the Northern Territory, including daily living, SIL, community nursing and social participation supports.";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light",
+  themeColor: "#1678b8",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://elitehcs.com.au"),
-  title: { default: "Elite Healthcare & Community Services | Registered NDIS Provider", template: "%s | Elite HCS" },
-  description: "Participant-centred NDIS support across Victoria, New South Wales, Northern Territory and South Australia. Explore daily living, SIL, community nursing and social participation supports.",
-  keywords: ["NDIS provider", "disability support services", "Supported Independent Living", "community nursing", "NDIS Melbourne", "NDIS Sydney", "NDIS Adelaide", "NDIS Alice Springs"],
-  alternates: { canonical: "/" },
-  openGraph: { title: "Elite Healthcare & Community Services", description: "Personalised NDIS support designed around your goals, choices and independence.", url: "/", siteName: "Elite HCS", locale: "en_AU", type: "website", images: [{ url: "/images/hero-care.jpg", width: 1800, height: 1800, alt: "A support worker welcoming an NDIS participant at home" }] },
-  twitter: { card: "summary_large_image", title: "Elite Healthcare & Community Services", description: "Participant-centred NDIS supports across four Australian states and territories.", images: ["/images/hero-care.jpg"] },
-  robots: { index: true, follow: true },
-  icons: { icon: "/favicon.png", apple: "/apple-touch-icon.png" }
+  metadataBase: new URL(siteUrl),
+  applicationName: "Elite HCS",
+  title: { default: title, template: "%s | Elite HCS" },
+  description,
+  keywords: [
+    "registered NDIS provider",
+    "disability support services",
+    "Supported Independent Living",
+    "community nursing care",
+    "community participation",
+    "personal activities support",
+    "NDIS transport",
+    "Specialist Disability Accommodation",
+    "NDIS Melbourne",
+    "NDIS Sydney",
+    "NDIS Adelaide",
+    "NDIS Alice Springs",
+  ],
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  category: "Disability support services",
+  referrer: "origin-when-cross-origin",
+  formatDetection: { email: false, address: false, telephone: false },
+  alternates: { canonical: "/", languages: { "en-AU": "/" } },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.png"],
+  },
+  appleWebApp: { capable: true, statusBarStyle: "default", title: "Elite HCS" },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName,
+    locale: "en_AU",
+    type: "website",
+    images: [
+      {
+        url: "/images/social-share.jpg",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: "Elite Healthcare & Community Services participant-centred NDIS support",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/social-share.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  other: {
+    "content-language": "en-AU",
+    "geo.region": "AU",
+    "geo.placename": "Australia",
+    coverage: "Victoria, New South Wales, South Australia, Northern Territory, Australia",
+    distribution: "global",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-AU"><body><a className="skip-link" href="#main-content">Skip to content</a>{children}</body></html>;
+  return (
+    <html lang="en-AU">
+      <body>
+        <a className="skip-link" href="#main-content">Skip to content</a>
+        {children}
+      </body>
+    </html>
+  );
 }

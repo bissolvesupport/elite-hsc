@@ -1,14 +1,18 @@
 :root {
-  --ink: #153b3f;
-  --muted: #587174;
-  --primary: #075f68;
-  --primary-dark: #043f47;
-  --accent: #bedb55;
-  --cream: #f7f5ef;
-  --mint: #e8f4f1;
-  --line: #dce8e5;
+  --ink: #173b61;
+  --muted: #526d86;
+  --primary: #1678b8;
+  --primary-dark: #0b4e88;
+  --primary-light: #eaf6fd;
+  --accent: #58b93b;
+  --accent-green: #58b93b;
+  --accent-magenta: #b51a98;
+  --accent-orange: #f05a22;
+  --cream: #fff9f2;
+  --mint: #eef8fd;
+  --line: #d8e9f4;
   --white: #ffffff;
-  --shadow: 0 20px 60px rgba(7, 56, 62, .12);
+  --shadow: 0 20px 60px rgba(20, 96, 151, .15);
 }
 
 * { box-sizing: border-box; }
@@ -29,4 +33,11 @@ button, input { font: inherit; }
 .button.secondary:hover { background: white; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 1000; padding: 10px 16px; background: white; transform: translateY(-150%); }
 .skip-link:focus { transform: none; }
-@media (max-width: 700px) { .container { width: min(100% - 28px, 1180px); } .section { padding: 72px 0; } }
+@media (max-width: 700px) {
+  body { padding-bottom: 72px; }
+  .container { width: min(100% - 24px, 1180px); }
+  .section { padding: 58px 0; }
+  .section-title { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .lead { font-size: 1rem; }
+  .button { width: 100%; min-height: 56px; padding-inline: 20px; }
+}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import styles from "./SiteShell.module.css";
 
 const footerNavigation = [
@@ -13,8 +13,9 @@ const footerNavigation = [
 const regions = ["Victoria", "New South Wales", "Northern Territory", "South Australia"];
 
 const socialLinks = [
-  { label: "Facebook", href: "https://www.facebook.com/elitehealthcareservice", icon: Facebook },
-  { label: "Instagram", href: "https://www.instagram.com/elitehcs2024/", icon: Instagram },
+  { label: "Facebook", href: "https://www.facebook.com/elitehcsau?ref=1", icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/elitehcs.au/", icon: Instagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/elitehcs.au/?viewAsMember=true", icon: Linkedin },
 ];
 
 export default function SiteFooter() {

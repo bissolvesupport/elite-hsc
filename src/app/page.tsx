@@ -65,22 +65,87 @@ const regions = ["Melbourne, VIC", "Sydney, NSW", "Adelaide, SA", "Alice Springs
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "MedicalBusiness"],
-  name: "Elite Healthcare & Community Services",
-  alternateName: "Elite HCS",
-  url: "https://elitehcs.com.au/",
-  logo: "https://elitehcs.com.au/images/logo-new.png",
-  description:
-    "A registered NDIS provider delivering participant-centred disability and community supports across Victoria, New South Wales, South Australia and the Northern Territory.",
-  telephone: "+61 415 427 649",
-  email: "enquiry@elitehcs.com.au",
-  identifier: {
-    "@type": "PropertyValue",
-    propertyID: "ABN",
-    value: "91 668 512 258",
-  },
-  areaServed: regions.map((name) => ({ "@type": "City", name })),
-  knowsAbout: services.map((service) => service.title),
+  "@graph": [
+    {
+      "@type": ["Organization", "MedicalOrganization"],
+      "@id": "https://elitehcs.com.au/#organization",
+      name: "Elite Healthcare & Community Services",
+      alternateName: "Elite HCS",
+      url: "https://elitehcs.com.au/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://elitehcs.com.au/images/logo-new.png",
+        width: 900,
+        height: 900,
+      },
+      image: "https://elitehcs.com.au/images/social-share.jpg",
+      description:
+        "A registered NDIS provider delivering participant-centred disability and community supports across Victoria, New South Wales, South Australia and the Northern Territory.",
+      telephone: "+61 415 427 649",
+      email: "enquiry@elitehcs.com.au",
+      taxID: "91 668 512 258",
+      sameAs: [
+        "https://www.facebook.com/elitehcsau",
+        "https://www.instagram.com/elitehcs.au/",
+        "https://www.linkedin.com/company/elitehcs.au/",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+61 415 427 649",
+        email: "enquiry@elitehcs.com.au",
+        areaServed: "AU",
+        availableLanguage: ["English"],
+      },
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "ABN",
+        value: "91 668 512 258",
+      },
+      areaServed: regions.map((name) => ({ "@type": "City", name })),
+      knowsAbout: services.map((service) => service.title),
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "NDIS support services",
+        itemListElement: services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            description: service.copy,
+            provider: { "@id": "https://elitehcs.com.au/#organization" },
+            areaServed: { "@type": "Country", name: "Australia" },
+          },
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://elitehcs.com.au/#website",
+      url: "https://elitehcs.com.au/",
+      name: "Elite Healthcare & Community Services",
+      alternateName: "Elite HCS",
+      description: "Participant-centred NDIS support designed around your goals, choices and independence.",
+      inLanguage: "en-AU",
+      publisher: { "@id": "https://elitehcs.com.au/#organization" },
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://elitehcs.com.au/#webpage",
+      url: "https://elitehcs.com.au/",
+      name: "Elite Healthcare & Community Services | Registered NDIS Provider",
+      description: "Participant-centred NDIS support across Victoria, New South Wales, South Australia and the Northern Territory.",
+      isPartOf: { "@id": "https://elitehcs.com.au/#website" },
+      about: { "@id": "https://elitehcs.com.au/#organization" },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: "https://elitehcs.com.au/images/social-share.jpg",
+        width: 1200,
+        height: 630,
+      },
+      inLanguage: "en-AU",
+    },
+  ],
 };
 
 export default function HomePage() {
