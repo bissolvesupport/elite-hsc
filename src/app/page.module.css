@@ -94,14 +94,16 @@
 }
 
 @media (max-width: 700px) {
-  .hero { padding: 40px 0 52px; }
-  .heroGrid { gap: 38px; }
-  .heroCopy h1 { margin: 16px 0 18px; font-size: clamp(2.45rem, 12vw, 3.3rem); line-height: 1.02; }
-  .heroCopy > p { font-size: 1rem; line-height: 1.65; }
-  .providerLabel { font-size: .76rem; letter-spacing: .06em; }
-  .actions { flex-direction: column; margin-top: 26px; }
-  .phoneLink { width: 100%; min-height: 50px; justify-content: center; margin-top: 12px; border: 1px solid var(--line); border-radius: 999px; background: white; }
-  .heroMedia { min-height: 360px; }
+  .hero { padding: 24px 0 38px; }
+  .heroGrid { gap: 20px; }
+  .heroCopy h1 { margin: 12px 0 12px; font-size: clamp(2rem, 10.2vw, 2.65rem); line-height: 1; letter-spacing: -.05em; }
+  .heroCopy > p { font-size: .92rem; line-height: 1.48; }
+  .providerLabel { font-size: .68rem; letter-spacing: .055em; }
+  .providerLabel svg { width: 16px; height: 16px; }
+  .actions { flex-direction: column; margin-top: 18px; }
+  .heroContactAction, .phoneLink { display: none; }
+  .actions :global(.button) { min-height: 48px; }
+  .heroMedia { min-height: 310px; }
   .heroMedia > img { border-radius: 88px 88px 24px 24px; }
   .heroMedia::before { width: 120px; height: 120px; right: -30px; }
   .heroNote { right: 10px; bottom: 14px; max-width: 230px; padding: 14px 16px; }

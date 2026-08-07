@@ -163,7 +163,7 @@ export default function HomePage() {
                 Personalised disability support for greater confidence, connection and independence—delivered by a team that listens.
               </p>
               <div className={styles.actions}>
-                <a className="button" href="#contact">
+                <a className={`button ${styles.heroContactAction}`} href="#contact">
                   Talk to our team <ArrowRight size={18} aria-hidden="true" />
                 </a>
                 <a className="button secondary" href="#services">
