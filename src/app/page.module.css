@@ -105,7 +105,7 @@
   .actions :global(.button) { min-height: 48px; }
   .heroMedia { min-height: 310px; }
   .heroMedia > img { border-radius: 88px 88px 24px 24px; }
-  .heroMedia::before { width: 120px; height: 120px; right: -30px; }
+  .heroMedia::before { width: 120px; height: 120px; top: 12px; right: -30px; }
   .heroNote { right: 10px; bottom: 14px; max-width: 230px; padding: 14px 16px; }
   .heroNote span { font-size: .8rem; }
   .trustGrid { grid-template-columns: 1fr; padding-block: 8px; }
