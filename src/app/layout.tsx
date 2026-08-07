@@ -5,7 +5,7 @@ const siteName = "Elite Healthcare & Community Services";
 const siteUrl = "https://elitehcs.com.au";
 const title = `${siteName} | Registered NDIS Provider`;
 const description =
-  "Participant-centred NDIS support across Victoria, New South Wales, South Australia and the Northern Territory, including daily living, SIL, community nursing and social participation supports.";
+  "Participant-centred NDIS support across Victoria, New South Wales, South Australia and the Northern Territory, including daily living, SIL and social participation supports.";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     "registered NDIS provider",
     "disability support services",
     "Supported Independent Living",
-    "community nursing care",
     "community participation",
     "personal activities support",
     "NDIS transport",
