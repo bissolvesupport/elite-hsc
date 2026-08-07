@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import { siteUrl, socialImageUrl } from "@/lib/site";
 import "./globals.css";
 
 const siteName = "Elite Healthcare & Community Services";
-const siteUrl = "https://elitehcs.com.au";
 const title = `${siteName} | Registered NDIS Provider`;
 const description =
   "Participant-centred NDIS support across Victoria, New South Wales, South Australia and the Northern Territory, including daily living, SIL and social participation supports.";
@@ -58,7 +58,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/social-share.jpg",
+        url: socialImageUrl,
+        secureUrl: socialImageUrl,
         width: 1200,
         height: 630,
         type: "image/jpeg",
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/social-share.jpg"],
+    images: [socialImageUrl],
   },
   robots: {
     index: true,

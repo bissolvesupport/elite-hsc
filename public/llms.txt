@@ -2,7 +2,7 @@
 
 > Elite HCS is a registered NDIS provider delivering participant-centred disability and community supports across Victoria, New South Wales, South Australia and the Northern Territory.
 
-Canonical website: https://elitehcs.com.au/
+Canonical website: https://elite-hsc.vercel.app/
 Language: English (Australia)
 Phone: +61 415 427 649
 Email: enquiry@elitehcs.com.au
@@ -25,10 +25,10 @@ ABN: 91 668 512 258
 
 ## Key pages
 
-- Home and services: https://elitehcs.com.au/
-- Privacy policy: https://elitehcs.com.au/privacy-policy
-- Terms and conditions: https://elitehcs.com.au/terms-and-conditions
-- Sitemap: https://elitehcs.com.au/sitemap.xml
+- Home and services: https://elite-hsc.vercel.app/
+- Privacy policy: https://elite-hsc.vercel.app/privacy-policy
+- Terms and conditions: https://elite-hsc.vercel.app/terms-and-conditions
+- Sitemap: https://elite-hsc.vercel.app/sitemap.xml
 
 ## Official social profiles
 

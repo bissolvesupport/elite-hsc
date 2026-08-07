@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   return [
-    { url: "https://elitehcs.com.au/", lastModified, changeFrequency: "weekly", priority: 1 },
-    { url: "https://elitehcs.com.au/privacy-policy", lastModified, changeFrequency: "yearly", priority: .3 },
-    { url: "https://elitehcs.com.au/terms-and-conditions", lastModified, changeFrequency: "yearly", priority: .3 },
+    { url: `${siteUrl}/`, lastModified, changeFrequency: "weekly", priority: 1 },
+    { url: `${siteUrl}/privacy-policy`, lastModified, changeFrequency: "yearly", priority: .3 },
+    { url: `${siteUrl}/terms-and-conditions`, lastModified, changeFrequency: "yearly", priority: .3 },
   ];
 }

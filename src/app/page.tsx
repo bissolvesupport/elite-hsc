@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { siteUrl, socialImageUrl } from "@/lib/site";
 import styles from "./page.module.css";
 
 const services = [
@@ -62,17 +63,17 @@ const jsonLd = {
   "@graph": [
     {
       "@type": ["Organization", "MedicalOrganization"],
-      "@id": "https://elitehcs.com.au/#organization",
+      "@id": `${siteUrl}/#organization`,
       name: "Elite Healthcare & Community Services",
       alternateName: "Elite HCS",
-      url: "https://elitehcs.com.au/",
+      url: `${siteUrl}/`,
       logo: {
         "@type": "ImageObject",
-        url: "https://elitehcs.com.au/images/logo-new.png",
+        url: `${siteUrl}/images/logo-new.png`,
         width: 900,
         height: 900,
       },
-      image: "https://elitehcs.com.au/images/social-share.jpg",
+      image: socialImageUrl,
       description:
         "A registered NDIS provider delivering participant-centred disability and community supports across Victoria, New South Wales, South Australia and the Northern Territory.",
       telephone: "+61 415 427 649",
@@ -107,7 +108,7 @@ const jsonLd = {
             "@type": "Service",
             name: service.title,
             description: service.copy,
-            provider: { "@id": "https://elitehcs.com.au/#organization" },
+            provider: { "@id": `${siteUrl}/#organization` },
             areaServed: { "@type": "Country", name: "Australia" },
           },
         })),
@@ -115,25 +116,25 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://elitehcs.com.au/#website",
-      url: "https://elitehcs.com.au/",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
       name: "Elite Healthcare & Community Services",
       alternateName: "Elite HCS",
       description: "Participant-centred NDIS support designed around your goals, choices and independence.",
       inLanguage: "en-AU",
-      publisher: { "@id": "https://elitehcs.com.au/#organization" },
+      publisher: { "@id": `${siteUrl}/#organization` },
     },
     {
       "@type": "WebPage",
-      "@id": "https://elitehcs.com.au/#webpage",
-      url: "https://elitehcs.com.au/",
+      "@id": `${siteUrl}/#webpage`,
+      url: `${siteUrl}/`,
       name: "Elite Healthcare & Community Services | Registered NDIS Provider",
       description: "Participant-centred NDIS support across Victoria, New South Wales, South Australia and the Northern Territory.",
-      isPartOf: { "@id": "https://elitehcs.com.au/#website" },
-      about: { "@id": "https://elitehcs.com.au/#organization" },
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#organization` },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://elitehcs.com.au/images/social-share.jpg",
+        url: socialImageUrl,
         width: 1200,
         height: 630,
       },
