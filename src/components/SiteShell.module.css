@@ -29,7 +29,7 @@
 .logo { width: 68px; height: 68px; object-fit: contain; }
 .brandText { display: grid; color: var(--primary-dark); line-height: 1.08; }
 .brandText strong { font-size: 1rem; font-weight: 900; letter-spacing: -.015em; text-transform: uppercase; }
-.brandText > span { margin-top: 3px; font-size: .69rem; font-weight: 800; letter-spacing: .035em; text-transform: uppercase; }
+.brandText > span { margin-top: 3px; font-size: .69rem; font-weight: 900; letter-spacing: .025em; text-transform: uppercase; }
 .brandText small { margin-top: 5px; color: var(--accent-magenta); font-size: .68rem; font-weight: 800; letter-spacing: .055em; }
 
 .desktopNav {
