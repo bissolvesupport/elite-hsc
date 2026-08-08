@@ -44,7 +44,7 @@ export default function SiteHeader() {
           />
           <span className={styles.brandText}>
             <strong>Elite Healthcare</strong>
-            <span>&amp; Community Services</span>
+            <strong className={styles.brandSubline}>&amp; Community Services</strong>
             <small>Making Life Better</small>
           </span>
         </a>
