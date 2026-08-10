@@ -13,6 +13,7 @@ import {
   Phone,
   ShieldCheck,
   Sparkles,
+  Stethoscope,
   Users,
 } from "lucide-react";
 import SiteFooter from "@/components/SiteFooter";
@@ -35,6 +36,11 @@ const services = [
     icon: HeartHandshake,
     title: "Personal Activities",
     copy: "Respectful assistance with everyday personal activities, shaped around your routines and preferences.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Community Nursing Care",
+    copy: "Individual nursing support that helps you manage your health needs safely and with confidence.",
   },
   {
     icon: Bus,
