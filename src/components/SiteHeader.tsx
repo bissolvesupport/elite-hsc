@@ -7,7 +7,7 @@ import styles from "./SiteShell.module.css";
 
 const navigation = [
   { label: "Services", href: "/#services" },
-  { label: "Home vacancies", href: "/#vacancies" },
+  { label: "Vacancies", href: "/#vacancies" },
   { label: "About", href: "/#about" },
   { label: "How it works", href: "/#process" },
   { label: "Locations", href: "/#locations" },
