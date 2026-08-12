@@ -1,6 +1,6 @@
 .acknowledgement { padding: 48px 0; background: #174f88; color: white; }
-.inner { display: grid; grid-template-columns: 62px 1fr; align-items: center; gap: 22px; }
+.inner { display: grid; grid-template-columns: 52px 1fr; align-items: center; gap: 20px; }
 .flags { display: grid; justify-items: center; gap: 7px; }
-.flags svg { display: block; width: 56px; height: 37px; overflow: hidden; border: 1px solid rgba(255,255,255,.16); border-radius: 4px; background: white; box-shadow: 0 3px 8px rgba(0,0,0,.14); }
+.flags svg { display: block; width: 48px; height: 30px; overflow: hidden; border: 1px solid rgba(255,255,255,.16); border-radius: 4px; background: white; box-shadow: 0 3px 8px rgba(0,0,0,.14); }
 .inner p { max-width: 920px; margin: 0; font-family: inherit; font-size: 1rem; font-weight: 400; line-height: 1.6; }
-@media (max-width: 700px) { .acknowledgement { padding: 38px 0; } .inner { grid-template-columns: 1fr; gap: 18px; } .flags { display: flex; justify-content: flex-start; gap: 8px; } .flags svg { width: 52px; height: 35px; } }
+@media (max-width: 700px) { .acknowledgement { padding: 38px 0; } .inner { grid-template-columns: 1fr; gap: 18px; } .flags { display: flex; justify-content: flex-start; gap: 8px; } .flags svg { width: 48px; height: 30px; } }
