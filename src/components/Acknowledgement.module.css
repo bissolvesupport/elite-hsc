@@ -1,0 +1,6 @@
+.acknowledgement { padding: 48px 0; background: #174f88; color: white; }
+.inner { display: grid; grid-template-columns: 80px 1fr; align-items: center; gap: 28px; }
+.flags { display: grid; gap: 8px; }
+.flags svg { width: 72px; height: 48px; overflow: hidden; border-radius: 5px; box-shadow: 0 3px 10px rgba(0,0,0,.15); }
+.inner p { max-width: 920px; margin: 0; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.55; }
+@media (max-width: 700px) { .acknowledgement { padding: 38px 0; } .inner { grid-template-columns: 1fr; gap: 22px; } .flags { display: flex; gap: 10px; } .flags svg { width: 58px; height: 39px; } .inner p { font-size: .98rem; line-height: 1.6; } }

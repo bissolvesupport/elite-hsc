@@ -1,0 +1,32 @@
+.vacancies { overflow: hidden; padding: 92px 0; background: radial-gradient(circle at 0 5%, rgba(255,255,255,.8) 0 180px, transparent 181px), #edf7fd; }
+.heading { max-width: 780px; margin: 0 auto 38px; text-align: center; }
+.heading h2 { margin: 8px 0 12px; color: var(--primary-dark); font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.05; letter-spacing: -.045em; }
+.heading p { margin: 0 auto; max-width: 650px; color: var(--muted); font-size: 1.05rem; }
+.sampleNotice { display: inline-block; margin-top: 16px; padding: 7px 12px; border-radius: 999px; background: #fff3e8; color: #9b3b16; font-size: .78rem; font-weight: 800; }
+.searchPanel { display: grid; grid-template-columns: 1.1fr 1fr 1fr auto; align-items: end; gap: 18px; padding: 30px 34px; border-radius: 28px; background: linear-gradient(135deg, var(--primary), #136ab2); box-shadow: 0 18px 40px rgba(11,78,136,.18); }
+.searchPanel label { display: grid; gap: 8px; }
+.searchPanel label > span { color: white; font-size: .9rem; font-weight: 800; }
+.searchPanel input, .searchPanel select { width: 100%; min-height: 56px; padding: 0 16px; border: 0; border-radius: 12px; background: white; color: var(--ink); outline: 0; }
+.searchPanel select { cursor: pointer; }
+.inputWrap { position: relative; }
+.inputWrap svg { position: absolute; top: 50%; left: 15px; color: var(--primary); transform: translateY(-50%); }
+.inputWrap input { padding-left: 44px; }
+.searchPanel input:focus, .searchPanel select:focus { outline: 3px solid var(--accent-green); outline-offset: 2px; }
+.searchPanel button { display: inline-flex; min-height: 56px; align-items: center; justify-content: center; gap: 8px; padding: 0 24px; border: 0; border-radius: 999px; background: #102f50; color: white; font-weight: 850; cursor: pointer; }
+.homeGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 28px; }
+.homeCard { overflow: hidden; border: 1px solid #cbdfea; border-radius: 22px; background: white; box-shadow: 0 14px 34px rgba(20,96,151,.1); }
+.cardImage { position: relative; min-height: 205px; }
+.cardImage img { object-fit: cover; }
+.cardImage span { position: absolute; top: 12px; left: 12px; padding: 7px 11px; border-radius: 999px; background: rgba(11,39,67,.92); color: white; font-size: .7rem; font-weight: 850; }
+.cardBody { padding: 22px; }
+.cardBody small { color: var(--primary); font-weight: 800; text-transform: uppercase; }
+.cardBody h3 { margin: 5px 0 7px; font-size: 1.55rem; line-height: 1.12; }
+.cardBody p { margin: 0; color: var(--muted); }
+.features { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; padding: 16px 0; border-block: 1px solid var(--line); }
+.features span { display: inline-flex; align-items: center; gap: 5px; font-size: .82rem; font-weight: 750; }
+.features svg { width: 18px; height: 18px; color: var(--primary); }
+.cardBody a { display: flex; min-height: 48px; align-items: center; justify-content: center; border-radius: 12px; background: var(--primary); color: white; font-size: .9rem; font-weight: 850; }
+.cardBody a:hover { background: var(--primary-dark); }
+.noResults { grid-column: 1 / -1; padding: 36px; border-radius: 18px; background: white; color: var(--muted); text-align: center; }
+@media (max-width: 1050px) { .searchPanel { grid-template-columns: 1fr 1fr; } .homeGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .vacancies { padding: 58px 0; } .heading { margin-bottom: 28px; text-align: left; } .heading h2 { font-size: 2.45rem; } .searchPanel { grid-template-columns: 1fr; gap: 15px; padding: 22px 18px; border-radius: 22px; } .searchPanel input, .searchPanel select, .searchPanel button { min-height: 54px; } .homeGrid { grid-template-columns: 1fr; } .cardImage { min-height: 220px; } }

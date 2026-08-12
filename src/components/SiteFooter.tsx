@@ -5,6 +5,7 @@ import styles from "./SiteShell.module.css";
 const footerNavigation = [
   { label: "About us", href: "/#about" },
   { label: "Our services", href: "/#services" },
+  { label: "Sample homes", href: "/#vacancies" },
   { label: "How it works", href: "/#process" },
   { label: "Service locations", href: "/#locations" },
   { label: "Make an enquiry", href: "/#contact" },

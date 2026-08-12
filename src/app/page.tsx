@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import Acknowledgement from "@/components/Acknowledgement";
+import HomeVacancies from "@/components/HomeVacancies";
 import { siteUrl, socialImageUrl } from "@/lib/site";
 import styles from "./page.module.css";
 
@@ -229,6 +231,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        <HomeVacancies />
+
         <section className={`section ${styles.about}`} id="about" aria-labelledby="about-title">
           <div className={`container ${styles.aboutGrid}`}>
             <div className={styles.aboutImage}>
@@ -296,6 +300,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+      <Acknowledgement />
       <SiteFooter />
     </>
   );
