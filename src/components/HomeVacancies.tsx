@@ -6,10 +6,10 @@ import { useMemo, useState } from "react";
 import styles from "./HomeVacancies.module.css";
 
 const sampleHomes = [
-  { location: "Sunshine", state: "VIC", type: "Shared home", category: "High Physical Support", beds: 4, baths: 2, vacancies: 1, image: "/images/hero-care.jpg" },
-  { location: "Parramatta", state: "NSW", type: "Supported independent living", category: "Improved Liveability", beds: 3, baths: 2, vacancies: 1, image: "/images/about-care.jpg" },
-  { location: "Adelaide", state: "SA", type: "Shared home", category: "Fully Accessible", beds: 4, baths: 2, vacancies: 2, image: "/images/elite-care.jpg" },
-  { location: "Alice Springs", state: "NT", type: "Individual living", category: "Robust", beds: 2, baths: 1, vacancies: 1, image: "/images/about.jpg" },
+  { location: "Sunshine", state: "VIC", type: "Shared home", category: "High Physical Support", beds: 4, baths: 2, vacancies: 1, image: "/images/home-victoria.png" },
+  { location: "Parramatta", state: "NSW", type: "Supported independent living", category: "Improved Liveability", beds: 3, baths: 2, vacancies: 1, image: "/images/home-nsw.png" },
+  { location: "Adelaide", state: "SA", type: "Shared home", category: "Fully Accessible", beds: 4, baths: 2, vacancies: 2, image: "/images/home-sa.png" },
+  { location: "Alice Springs", state: "NT", type: "Individual living", category: "Robust", beds: 2, baths: 1, vacancies: 1, image: "/images/home-nt.png" },
 ];
 
 export default function HomeVacancies() {
@@ -60,7 +60,7 @@ export default function HomeVacancies() {
           {results.map((home) => (
             <article className={styles.homeCard} key={`${home.location}-${home.state}`}>
               <div className={styles.cardImage}>
-                <Image src={home.image} alt="Sample supported accommodation listing" fill sizes="(max-width: 700px) 100vw, 25vw" />
+                <Image src={home.image} alt={`Sample accessible home in ${home.location}, ${home.state}`} fill sizes="(max-width: 700px) 100vw, 25vw" />
                 <span>{home.category}</span>
               </div>
               <div className={styles.cardBody}>
