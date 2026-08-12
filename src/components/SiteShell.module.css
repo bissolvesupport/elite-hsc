@@ -178,9 +178,10 @@
 }
 
 @media (max-width: 700px) {
-  .mobileQuickActions { position: relative; z-index: 20; display: grid; grid-template-columns: 1fr 1.25fr; gap: 8px; padding: 9px 12px; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); box-shadow: 0 8px 22px rgba(20,96,151,.1); }
-  .mobileQuickActions a { display: flex; min-height: 52px; align-items: center; justify-content: center; gap: 7px; border: 1px solid var(--primary); border-radius: 14px; color: var(--primary); font-size: .9rem; font-weight: 850; }
+  .mobileQuickActions { position: fixed; right: 0; bottom: 0; left: 0; z-index: 120; display: grid; grid-template-columns: 1fr 1.25fr; gap: 8px; padding: 7px 10px max(7px, env(safe-area-inset-bottom)); background: rgba(255,255,255,.97); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(20,96,151,.12); backdrop-filter: blur(12px); }
+  .mobileQuickActions a { display: flex; min-height: 46px; align-items: center; justify-content: center; gap: 7px; border: 1px solid var(--primary); border-radius: 12px; color: var(--primary); font-size: .86rem; font-weight: 850; }
   .mobileQuickActions a:last-child { background: var(--primary); color: white; }
+  :global(body:has(input:focus, select:focus)) .mobileQuickActions { display: none; }
   .footerMain { grid-template-columns: 1fr; gap: 38px; padding-top: 52px; padding-bottom: 48px; }
   .footerBrand, .contactColumn { grid-column: auto; }
   .footerLogo { width: 150px; height: 150px; }

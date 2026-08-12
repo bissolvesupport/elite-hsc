@@ -34,6 +34,8 @@ button, input { font: inherit; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 1000; padding: 10px 16px; background: white; transform: translateY(-150%); }
 .skip-link:focus { transform: none; }
 @media (max-width: 700px) {
+  body { padding-bottom: calc(61px + env(safe-area-inset-bottom)); }
+  html { scroll-padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
   .container { width: min(100% - 24px, 1180px); }
   .section { padding: 58px 0; }
   .section-title { font-size: clamp(2rem, 10vw, 2.8rem); }
