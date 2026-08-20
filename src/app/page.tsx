@@ -231,8 +231,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <HomeVacancies />
-
         <section className={`section ${styles.about}`} id="about" aria-labelledby="about-title">
           <div className={`container ${styles.aboutGrid}`}>
             <div className={styles.aboutImage}>
@@ -257,6 +255,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <HomeVacancies />
 
         <section className="section" id="process" aria-labelledby="process-title">
           <div className={`container ${styles.processWrap}`}>
